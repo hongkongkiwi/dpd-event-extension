@@ -15,5 +15,14 @@
   "readmeFilename": "README.md",
   "bugs": {
     "url": "https://github.com/mcantelon/dpd-event-extension/issues"
+  },
+  "readme": "dpd-event-extension\n===================\n\nThis module patches the Deployd dpd-event module to allow those\nwriting endpoint logic to access the require function, the process\nobject, and Deployd context data.\n\nThe require function can be used as it normally is in Node.\n\nThe process object can be used to import modules that aren't\nin the node_modules directory. For example:\n\n    var path = require('path'),\n        helpers = require(\n          path.join(process().cwd(), 'resources/aips/lib/helpers.js')\n        );\n\nThe context data, returned by calling the `context` function, can\nbe used to inspect Deployd state data.\n\nThe code is a modified version of a Gist by GitHub user Fedia:\n\nhttps://gist.github.com/Fedia/4089364\n",
+  "homepage": "https://github.com/mcantelon/dpd-event-extension",
+  "_id": "dpd-event-extension@0.0.3",
+  "_shasum": "cbde43ecc6b85f1c22f31a462902e9493be4a32d",
+  "_resolved": "git://github.com/hongkongkiwi/dpd-event-extension.git#337f2b6556de84e786811d57624c68f8f98fa186",
+  "_from": "git://github.com/hongkongkiwi/dpd-event-extension.git",
+  "dependencies": {
+    "underscore": "^1.8.3"
   }
 }
